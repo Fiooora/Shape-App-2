@@ -1,0 +1,37 @@
+<html>
+<head>
+<body>
+<canvas id="mycan" width=500 height=500 style="border:5px dotted blue;"></canvas>
+<input type="button" OnClick="circle()" value="circle">
+<input type="button" OnClick="square()" value="square">
+<input type="button" OnClick="tri()" value="triangle">
+<script>
+    function square()
+    {
+        var x=document.getElementById("mycan");
+        var y=x.getContext('2d');
+        y.fillRect(50,50,50,50)
+    }
+    function circle()
+    {
+        var x=document.getElementById("mycan");
+        var y=x.getContext('2d');
+        y.fillStyle="red";
+        y.arc(300,400,50,0,6.28);
+        y.fill();
+    }
+    function tri()
+    {
+        var x=document.getElementById("mycan");
+        var y=x.getContext('2d');
+        y.moveTo(150,200);
+        y.lineTo(100,300);
+        y.lineTo(200,300);
+        y.lineTo(150,200);
+        y.fillStyle="blue";
+        y.stroke();
+    }
+</script>
+</body>
+</head>
+</html>
